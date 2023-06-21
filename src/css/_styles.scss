@@ -10,9 +10,12 @@ html {
 }
 
 body{
+  font-family: 'Arial Narrow';
   font-size: 10px;
   font-weight: normal;
   background-color: $backgLight;
+  height: 75vh;
+
 }
 
 .hidden {
@@ -34,7 +37,6 @@ margin-top: 30px;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  height: 75vh;
   width: 60vw;
 }
 
@@ -183,7 +185,7 @@ margin-top: 30px;
 
     @media screen and (min-width: 1200px){
     width: 130px;
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -194,7 +196,7 @@ margin-top: 30px;
   padding: 0 10px;
   background-color: #777;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -238,19 +240,19 @@ margin-top: 30px;
     display: block;
     position: absolute;
     left: 0px;
-    top: 9px;
+    top: 7px;
     width: 30px;
     height: 30px;
     background-size: cover;
 
     @media screen and (min-width: 768px){
     left: 5px;
-    top: 10px;
+    top: 3px;
   }
 
     @media screen and (min-width: 1200px){
     left: 10px;
-    top: 5px;
+    top: 0;
   }
 }
 
@@ -266,7 +268,7 @@ margin-top: 30px;
   border-radius: 4px;
   font-size: 1.2rem;
   text-align: center;
-  padding: 3px 4px;
+  padding: 5px 4px;
   cursor: pointer;
   }
 
@@ -305,5 +307,19 @@ margin-top: 30px;
   border: 1px solid $fieldColor;
   &::placeholder{
   font-size: 0.7rem;
+   @media screen and (min-width: 1200px){
+    font-size: 1rem;
+    text-align: center;
+  }
+  }
+  //   @media screen and (min-width: 768px){
+  //   width: 120px;
+  //   font-size: 2rem;
+  //   padding: 3px 0;
+  // }
+
+    @media screen and (min-width: 1200px){
+    width: 100px;
+    font-size: 1rem;
   }
 }

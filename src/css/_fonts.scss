@@ -1,13 +1,166 @@
 @font-face {
-ont-family: "Kaushan Script";
-font-style: normal;
-font-weight: 400;
-font-display: swap;
-/* font-display: swap рекомендується використовувати для заголовків */
-/ * Функція local. Браузер спочатку спробує знайти шрифт локально */
-  src: local("Kaushan Script"),
-/* Якщо не вийде, завантажить woff2, вказуємо директорію, де розташовується шрифт з таким розширенням */
-url("/fonts/kaushanscript.woff2") format("woff2"),
-/* Якщо браузер не підтримує woff2, завантажить woff вказуємо директорію, де розташовується шрифт з таким розширенням */
-url("/fonts/kaushanscript.woff") format("woff");
+  font-family: 'Georgia';
+  src: local('Georgia 700'), local('Georgia-700'),
+    url('../fonts/Georgia-Bold.woff2') format('woff2'),
+    url('../../fonts/Georgia-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia'), url('../../fonts/Georgia.woff2') format('woff2'),
+    url('../../fonts/Georgia.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia Italic'), local('Georgia-Italic'),
+    url('../../fonts/Georgia-Italic.woff2') format('woff2'),
+    url('../../fonts/Georgia-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia 700 Italic'), local('Georgia-700Italic'),
+    url('../../fonts/Georgia-700Italic.woff2') format('woff2'),
+    url('../../fonts/Georgia-700Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia 700'), local('Georgia-700'),
+    url('../../fonts/Georgia-700.woff2') format('woff2'),
+    url('../../fonts/Georgia-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia'), url('../../fonts/Georgia.woff2') format('woff2'),
+    url('../../fonts/Georgia.woff../../fonts/') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia Italic'), local('Georgia-Italic'),
+    url('../../fonts/Georgia-Italic.woff2') format('woff2'),
+    url('../../fonts/Georgia-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: local('Georgia 700 Italic'), local('Georgia-700Italic'),
+    url('../../fonts/Georgia-700Italic.woff2') format('woff2'),
+    url('../../fonts/Georgia-700Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: local('Arial Narrow'), local('ArialNarrow'),
+    url('../../fonts/ArialNarrow.woff2') format('woff2'),
+    url('../../fonts/ArialNarrow.woff') format('woff');
+  font-weight: normal;
+  font-style: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: local('Arial Narrow Italic'), local('ArialNarrow-Italic'),
+    url('../../fonts/ArialNarrow-Italic.woff2') format('woff2'),
+    url('../../fonts/ArialNarrow-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial'), local('ArialMT'),
+    url('../../fonts/ArialMT.woff2') format('woff2'),
+    url('../../fonts/ArialMT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: local('Arial Narrow 700'), local('ArialNarrow-700'),
+    url('../../fonts/ArialNarrow-700.woff2') format('woff2'),
+    url('../../fonts/ArialNarrow-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial Narrow';
+  src: local('Arial Narrow 700 Italic'), local('ArialNarrow-700Italic'),
+    url('../../fonts/ArialNarrow-700Italic.woff2') format('woff2'),
+    url('../../fonts/ArialNarrow-700Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial 700'), local('Arial-700MT'),
+    url('../../fonts/Arial-700MT.woff2') format('woff2'),
+    url('../../fonts/Arial-700MT.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial Italic'), local('Arial-ItalicMT'),
+    url('../../fonts/Arial-ItalicMT.woff2') format('woff2'),
+    url('../../fonts/Arial-ItalicMT.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial 700 Italic'), local('Arial-700ItalicMT'),
+    url('../../fonts/Arial-700ItalicMT.woff2') format('woff2'),
+    url('../../fonts/Arial-700ItalicMT.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial Black'), local('Arial-Black'),
+    url('../../fonts/Arial-Black.woff2') format('woff2'),
+    url('../../fonts/Arial-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
