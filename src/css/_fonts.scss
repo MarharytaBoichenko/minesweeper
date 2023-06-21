@@ -1,0 +1,13 @@
+@font-face {
+ont-family: "Kaushan Script";
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+/* font-display: swap рекомендується використовувати для заголовків */
+/ * Функція local. Браузер спочатку спробує знайти шрифт локально */
+  src: local("Kaushan Script"),
+/* Якщо не вийде, завантажить woff2, вказуємо директорію, де розташовується шрифт з таким розширенням */
+url("/fonts/kaushanscript.woff2") format("woff2"),
+/* Якщо браузер не підтримує woff2, завантажить woff вказуємо директорію, де розташовується шрифт з таким розширенням */
+url("/fonts/kaushanscript.woff") format("woff");
+}

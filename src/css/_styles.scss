@@ -1,0 +1,309 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  font-size: 10px;
+  font-weight: normal;
+  background-color: $backgLight;
+}
+
+.hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.end-info{
+margin-top: 30px;
+}
+
+.game{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+  width: 60vw;
+}
+
+.field{
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 400px;
+  background: $fieldColor;
+  border-radius: 0.2rem;
+  outline: none;
+
+  @media screen and (min-width: 768px){
+  height: 500px;
+  width: 500px;
+  }
+
+  @media screen and (min-width: 1200px){
+  height: 700px;
+  width: 700px;
+  }
+}
+
+.wrapper{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  @media screen and (min-width: 768px){
+  width: 500px;
+  }
+
+  @media screen and (min-width: 1200px){
+  width: 700px;
+  }
+}
+
+.cell {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #c0c0c0;
+    border: 2px outset $backgLight;
+    border-width: 0 1px 1px 0;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2rem;
+    line-height: normal;
+    font-weight: 500;
+
+    @media screen and (min-width: 768px){
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    padding: 3px 0;
+  }
+
+    @media screen and (min-width: 1200px){
+    height: 70px;
+    width: 70px;
+    font-size: 3rem;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px outset $backgLight;
+  }
+}
+
+// .mine {
+// background-color: red;
+// }
+
+.fire.clicked {
+  background-color: #e76346;
+  cursor: default;
+  pointer-events: none;
+}
+
+.one {
+  color: #0de27b;
+  cursor: default;
+}
+
+.two {
+  color: #0a7ac6;
+  cursor: default;
+}
+
+.three {
+  color: #f9a303;
+  cursor: default;
+}
+
+.four{
+  color: #a30574;
+  cursor: default;
+}
+
+.clicked {
+  background-color: $backgLight;
+  cursor: default;
+  border: none;
+  pointer-events: none;
+}
+
+.end{
+  pointer-events: none;
+}
+
+.info{
+  width:400px;
+  margin: 20px auto;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff0000;
+  text-align: center;
+}
+
+.timer {
+    width: 100px;
+    height: 40px;
+    padding: 0 5px;
+    background-color: #777;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+
+    @media screen and (min-width: 768px){
+    width: 120px;
+    font-size: 2rem;
+    padding: 3px 0;
+  }
+
+    @media screen and (min-width: 1200px){
+    width: 130px;
+    font-size: 3rem;
+  }
+}
+
+.flags, .bombs, .click{
+  position: relative;
+  width: 80px;
+  height: 40px;
+  padding: 0 10px;
+  background-color: #777;
+  border-radius: 4px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: end;
+
+  @media screen and (min-width: 768px){
+  width: 120px;
+  font-size: 1.7rem;
+  }
+
+  @media screen and (min-width: 1200px){
+  width: 130px;
+  font-size: 2rem;
+  }
+}
+
+.click{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.click-text{
+    @media screen and (min-width: 768px){
+    font-size: 1.2rem;
+  }
+
+    @media screen and (min-width: 1200px){
+    font-size: 2rem;
+  }
+}
+
+.flags::before{
+ content: "🚩";
+}
+.bombs::before{
+ content: "💣";
+}
+
+.flags::before, .bombs::before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+
+    @media screen and (min-width: 768px){
+    left: 5px;
+    top: 10px;
+  }
+
+    @media screen and (min-width: 1200px){
+    left: 10px;
+    top: 5px;
+  }
+}
+
+.bomb-number{
+  text-align: center;
+}
+
+.restart{
+  width: 80px;
+  height: 35px;
+  margin: 0 auto;
+  background-color: $fieldColor;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 3px 4px;
+  cursor: pointer;
+  }
+
+    .controls{
+      width: 60vw;
+      display: flex;
+      margin:0 auto;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+.sound-control{
+  display:flex
+}
+
+.sound-icon{
+  width: 20px;
+  height: 20px;
+}
+
+.sound-toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.bomb-input{
+  width: 60px;
+  border: 1px solid $fieldColor;
+  &::placeholder{
+  font-size: 0.7rem;
+  }
+}
